@@ -15,7 +15,7 @@ class Simulation:
     def set_default_config(self):
         self.t = 0.0            # Tijd bijhouden
         self.aantal_frames = 0    # Frame telling bijhouden
-        self.dt = 1/240          #  Simulatie tijdstap
+        self.dt = 1/90        #  Simulatie tijdstap
         self.wegen = []         #  Array om wegen op te slaan
         self.generators = []
         self.verkeerssignalen = []

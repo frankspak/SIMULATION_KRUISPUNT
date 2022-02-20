@@ -5,7 +5,7 @@ class Voertuigen:
         # Standaardconfiguratie instellen
         self.set_default_config()
 
-        #Update configuratie
+
         for attr, val in config.items():
             setattr(self, attr, val)
 

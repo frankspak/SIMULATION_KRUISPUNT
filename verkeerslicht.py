@@ -11,10 +11,11 @@ class Verkeerslicht:
         self.init_properties()
 
     def set_default_config(self):
-        self.cycle = [(False, True), (True, False)]
-        self.langzame_afstand = 50
-        self.langzame_factor = 0.4
-        self.stop_afstand = 15
+        self.cycle = [(True, False), (False, True)]
+        self.langzame_afstand = 45
+        self.langzame_factor = 0.3
+        self.stop_afstand = 10
+        self.satus = 0
 
         self.huidige_cyclusindex = 0
 
@@ -33,3 +34,4 @@ class Verkeerslicht:
         cycle_lengte = 30
         k = (sim.t // cycle_lengte) % 2
         self.huidige_cyclusindex = int(k)
+

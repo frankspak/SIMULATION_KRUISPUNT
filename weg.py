@@ -1,5 +1,6 @@
 from scipy.spatial import distance
 from collections import deque
+import numpy as np
 
 class Weg:
     def __init__(self, start, eind):
@@ -14,7 +15,7 @@ class Weg:
         self.lengte = distance.euclidean(self.start, self.eind)
         self.hoek_sin = (self.eind[1]-self.start[1]) / self.lengte
         self.hoek_cos = (self.eind[0]-self.start[0]) / self.lengte
-        # self.angle = np.arctan2(self.end[1]-self.start[1], self.end[0]-self.start[0])
+        self.angle = np.arctan2(self.eind[1]-self.start[1], self.eind[0]-self.start[0])
         self.heeft_verkeerslicht = False
 
     def verkeerslicht_instellen(self, signal, group):

@@ -1,9 +1,3 @@
-
-
-
-
-
-
 def bocht_punten(start, eind, control, resolution=5):
 	# Als curve een rechte lijn is
 	if (start[0] - eind[0])*(start[1] - eind[1]) == 0:
